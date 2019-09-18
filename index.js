@@ -49,7 +49,8 @@ tests:
 <section id='challengeSeed'>
 <div id='html-seed'>
 
-\`\`\`html`;
+\`\`\`html
+`;
 
 const CONTENT_B = `\`\`\`
 
