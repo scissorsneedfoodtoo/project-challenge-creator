@@ -103,8 +103,9 @@ challengeType: 0
 ---`;
 
     const FILE_CONTENTS = fs.readFileSync(PATH_TO_PROJECT_FILES + '/' + file, 'utf8');
+    const NEW_FILE_CONTENTS = FILE_CONTENTS.replace(/```/gm, '`');
 
-    const NEW_FILE = FRONTMATTER + CONTENT_A + FILE_CONTENTS + CONTENT_B;
+    const NEW_FILE = FRONTMATTER + CONTENT_A + NEW_FILE_CONTENTS + CONTENT_B;
 
     fs.writeFileSync(`./new-files/challenges/${DASHED_NAME}/part-${challengePart}.english.md`, NEW_FILE);
     console.log(`./new-files/challenges/${DASHED_NAME}/part-${challengePart}.english.md created`);
